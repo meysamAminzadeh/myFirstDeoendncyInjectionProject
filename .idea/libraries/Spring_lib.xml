@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Spring lib">
+    <CLASSES>
+      <root url="file://D:/JavaeeAPP/Spring lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://D:/JavaeeAPP/Spring lib" />
+    </SOURCES>
+    <jarDirectory url="file://D:/JavaeeAPP/Spring lib" recursive="false" />
+    <jarDirectory url="file://D:/JavaeeAPP/Spring lib" recursive="false" type="SOURCES" />
+  </library>
+</component>

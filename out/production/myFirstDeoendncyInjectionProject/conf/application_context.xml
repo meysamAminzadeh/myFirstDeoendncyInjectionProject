@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans>
+
+        <!--
+         <bean id="c1" class="springStartConfig.Class1"></bean>
+         <bean id="c2" class="springStartConfig.Class2"></bean>
+        -->
+
+
+        <!--
+          <bean  class="otherIOCAttribute.myBeans.Bean1"></bean>
+          <bean  class="otherIOCAttribute.myBeans.Bean2"></bean>
+         -->
+
+        <!--
+        <bean id="b1" class="otherIOCAttribute.myBeans.Bean1"></bean>
+        <bean id="b2" class="otherIOCAttribute.myBeans.Bean2" scope="prototype"></bean>
+         -->
+        <!--
+          <bean  class="otherIOCAttribute.myBeans.Bean1"></bean>
+          <bean  class="otherIOCAttribute.myBeans.Bean1"></bean>
+        -->
+
+        <!--       <bean id="b1" class="otherIOCAttribute.myBeans.Bean1"></bean>
+               <bean id="b2" class="otherIOCAttribute.myBeans.Bean1"></bean>
+     -->
+
+        <!--
+
+                   <bean id="b1" name="b1_* b1/" class="otherIOCAttribute.myBeans.Bean1"></bean>
+                   <bean id="b2" class="otherIOCAttribute.myBeans.Bean1"></bean>
+        -->
+
+<!--
+
+          <bean id="b1" class="springDependencyConstructorInjection.BeanClass1">
+              <constructor-arg value="20"></constructor-arg>
+          </bean>
+
+            <bean id="b2" class="springDependencyConstructorInjection.BeanClass1">
+                <constructor-arg value="20" type="int"></constructor-arg>
+            </bean>
+-->
+
+<!--
+
+              <bean id="b1" class="springDependencyConstructorInjection.BeanClass1">
+                  <constructor-arg value="meysam" ></constructor-arg>
+                  <constructor-arg value="aminzadeh" ></constructor-arg>
+              </bean>
+
+              <bean id="b2" class="springDependencyConstructorInjection.BeanClass1">
+                    <constructor-arg value="meysam" index="1"></constructor-arg>
+                    <constructor-arg value="aminzadeh" index="0"></constructor-arg>
+              </bean>
+-->
+<!--
+              <bean id="b1" class="springDependencyConstructorInjection.BeanClass1">
+                  <constructor-arg type="springDependencyConstructorInjection.BeanClass2">
+                      <bean class="springDependencyConstructorInjection.BeanClass2"></bean>
+                  </constructor-arg>
+
+              </bean>
+
+ -->
+
+<!--        <bean id="b1" class="springDependencyConstructorInjection.BeanClass1">
+                <constructor-arg type="springDependencyConstructorInjection.BeanClass2">
+                    <bean class="springDependencyConstructorInjection.BeanClass2">
+                        <constructor-arg value="123"></constructor-arg>
+                    </bean>
+                </constructor-arg>
+
+        </bean>-->
+<!--
+
+            <bean id="b1" class="springDependencyConstructorInjection.BeanClass1">
+                <constructor-arg type="springDependencyConstructorInjection.BeanClass2" ref="externalBeanClass2">
+
+                </constructor-arg>
+          </bean>
+
+            <bean id="externalBeanClass2" class="springDependencyConstructorInjection.BeanClass2">
+                <constructor-arg value="123"></constructor-arg>
+            </bean>
+-->
+
+
+      <!--  <bean id="bc1" class="springDependencySetterInjection.BeanSetterClass1">
+                <property name="name" value="meysam"></property>
+        </bean>
+-->
+
+       <!--       <bean id="bc1" class="springDependencySetterInjection.BeanSetterClass1">
+                    <property name="id" value="10" ></property>
+                </bean>
+-->
+
+
+
+<!--
+
+           <bean id="bc1" class="springDependencySetterInjection.BeanSetterClass1">
+                    <property name="id" value="10" ></property>
+           </bean>
+
+           <bean id="bc2" class="springDependencySetterInjection.BeanSetterClass2">
+                   <property name="iBeanSetterClass" ref="bc1" ></property>
+           </bean>
+
+           <bean id="bc3" class="springDependencySetterInjection.BeanSetterClass2">
+            <property name="beanSetterClass1" ref="bc1" ></property>
+           </bean>
+
+-->
+
+
+    <!--     <bean id="bc1" class="springDependencySetterInjection.BeanSetterClass1" p:name="meysam" c:id="10">
+
+         </bean>
+
+
+         <bean id="bc2" class="springDependencySetterInjection.BeanSetterClass2" p:beanSetterClass1-ref="bc1">
+
+          </bean>
+
+          <bean id="bc3" class="springDependencySetterInjection.BeanSetterClass2" c:beanSetterClass1-ref="bc1">
+
+          </bean>
+-->
+
+             <bean id="sing" class="prototypeInSinglton.Singlton" scope="singleton" p:prototype-ref="prot"></bean>
+             <bean id="prot" class="prototypeInSinglton.Prototype" scope="prototype"></bean>
+    </beans>
+
+</beans>
